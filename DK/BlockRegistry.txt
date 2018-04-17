@@ -1,0 +1,4 @@
+CurrentID : 0, BlockName : anvil_base, BlockID : 0
+CurrentID : 1, BlockName : beacon, BlockID : 1
+CurrentID : 2, BlockName : , BlockID : 2
+CurrentID : 3, BlockName : , BlockID : 3
