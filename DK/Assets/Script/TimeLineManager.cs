@@ -28,10 +28,10 @@ public class TimeLineManager : MonoBehaviour
     void Awake()
     {
         _instance = this;
-        director = this.GetComponent<PlayableDirector>();
+        //director = this.GetComponent<PlayableDirector>();
 
-        _instance.LoadAsset();
-        _instance.Play();
+        //_instance.LoadAsset();
+        //_instance.Play();
     }
 
     public void Play()
