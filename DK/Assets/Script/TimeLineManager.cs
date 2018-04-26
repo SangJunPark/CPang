@@ -18,17 +18,26 @@ public class TimeLineManager : MonoBehaviour
 
     public void LoadAsset()
     {
-        var loaded = Resources.Load("TimeLines/SceneTL") as TimelineAsset;
-        if(loaded)
-            timelines.Add(loaded);
-        director.playableAsset = loaded;
-        director.RebuildGraph();
+        //var loadedAsset = Resources.Load("TimeLines/SceneTL") as TimelineAsset;
+        //if(loadedAsset)
+        //    timelines.Add(loadedAsset);
+        //director.playableAsset = loadedAsset;
+
+        //// iterate through tracks and map the objects appropriately
+        //for (var i = 0; i < trackList.Count; i++)
+        //{
+        //    if (trackList[i] != null)
+        //    {
+        //        var track = (TrackAsset)timelineAsset.outputs[i].sourceObject;
+        //        timeline.SetGenericBinding(track, trackList[i]);
+        //    }
+        //}
     }
 
     void Awake()
     {
         _instance = this;
-        //director = this.GetComponent<PlayableDirector>();
+       // director = this.GetComponent<PlayableDirector>();
 
         //_instance.LoadAsset();
         //_instance.Play();
@@ -36,7 +45,7 @@ public class TimeLineManager : MonoBehaviour
 
     public void Play()
     {
-        director.Play();
+        //director.Play();
     }
 
     public void Preload()

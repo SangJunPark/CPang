@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DK", "DK.csproj", "{F7BCA50A-50DF-B935-492A-ED95A806C34A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DK.Plugins", "DK.Plugins.csproj", "{BEE5261F-DD1A-9C97-6FB5-BA8FD5B971E2}"

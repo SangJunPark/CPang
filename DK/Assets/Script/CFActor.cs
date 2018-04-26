@@ -7,6 +7,10 @@ using UnityEngine.AI;
 
 public class CFActor : MonoBehaviour {
 
+    Animator animator;
+    float h;
+    float v;
+
     public LookAt lookAt;
     public NavMeshAgent agent;
     Vector3 dest;
@@ -16,19 +20,17 @@ public class CFActor : MonoBehaviour {
     private void Awake()
     {
         bMoving = false;
+        animator = GetComponent<Animator>();
     }
     public void SetDestination(Vector3 destPos, double clipDuration)
     {
         if (!bMoving)
         {
             bMoving = true;
-            //agent.updatePosition = false;
+            //agent.updatePosition = ;
             agent.destination = destPos;
 
             duration = (float)clipDuration;
-            //agent.speed = distance / (float)duration;
-            //agent.SetDestination(destPos);
-            //dest = destPos;
             StartCoroutine(Co_WaitForPath());
         }
     }
@@ -43,14 +45,17 @@ public class CFActor : MonoBehaviour {
     }
     private void Update()
     {
-        if (bMoving)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-         //   Debug.Log(agent.remainingDistance);
-            //dest = dest * 0.1f;
-            //dest = new Vector3(0.1f, 0, 0.1f);
-            //agent.Move(dest);
-            //Debug.Log("dd");
+            animator.Play("Lie", -1, 0);
         }
+        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical");
+        if (v > 0)
+            Debug.Log(v);
+
+        animator.SetFloat("h", h);
+        animator.SetFloat("v", v);
     }
 
 }

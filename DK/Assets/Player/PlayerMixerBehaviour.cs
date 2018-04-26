@@ -30,6 +30,7 @@ public class PlayerMixerBehaviour : PlayableBehaviour
         {
             float inputWeight = playable.GetInputWeight(i);
             ScriptPlayable<PlayerBehaviour> inputPlayable = (ScriptPlayable<PlayerBehaviour>)playable.GetInput(i);
+
             PlayerBehaviour input = inputPlayable.GetBehaviour ();
             
             totalWeight += inputWeight;
